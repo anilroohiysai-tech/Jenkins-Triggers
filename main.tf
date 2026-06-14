@@ -1,0 +1,12 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+resource "aws_instance" "web" {
+  ami           = "ami-0db56f446d44f2f09"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Terraform-WebServer"
+  }
+}
+
